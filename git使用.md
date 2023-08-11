@@ -66,9 +66,12 @@ git remote -v                       # 查看所有配置的远程库
 git fetch $remoteName               # 切换本地使用的远程库(空则为当前默认)
 git remote remove $remoteName       # 删除本地使用的候选远程库
 
-#远程覆盖本地(丢弃本地修改)
+# 远程覆盖本地(丢弃本地修改)
 git fetch --all
 git reset --hard origin.master
+
+# 修改远程库url地址
+git remote set-url origin git@xx.xx.xx.xx:/xx/xxx.git
 ```
 
 ### 八、把已有项目添加到gitee

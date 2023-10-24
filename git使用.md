@@ -30,10 +30,14 @@ git push origin master                          # clone后如果是空的，可�
 
 ```sh
 git status                          # 查看本地的改动状态
-git add xxx                         # 添加新文件或目录
+git add xxx                         # 添加(新)文件或目录改动
 git commit -m "xxx"                 # 提交到本地
 git push                            # 所有本地提交上传到远程仓库
 git pull                            # 从远程仓库更新代码
+
+git mv oldPath newPath              # git(记录)文件重命名, 如果直接改名可能导致改动丢失
+git rm xxxfile                      # 跟mv类似, 记录删除, 使用-r删除文件夹
+git diff xxxfile                    # 查看文件的改动情况, 在尚未add时
 ```
 
 ### 五、Git分支

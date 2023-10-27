@@ -6,7 +6,7 @@
 
 ## 代码机(diff端)
 
-```sh
+```shell
 #!/bin/bash
 
 fname=$1
@@ -59,7 +59,7 @@ fi
 
 ## 编译机(patch端)
 
-```sh
+```shell
 #!/bin/bash
 
 # 第一个参数作为diff文件

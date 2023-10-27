@@ -42,7 +42,7 @@
 
 ##### 脚本 `~/auto_reverse_proxy.sh`:
 
-```sh
+```shell
 #!/bin/bash
 
 # 代理服务器信息

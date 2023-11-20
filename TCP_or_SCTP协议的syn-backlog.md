@@ -6,7 +6,11 @@
 
 软件系统会使用到的协议是SCTP, 会短时间内模拟大量SCTP客户端发起连接SCTP服务端。
 
-抓包现象是模拟客户端发送了大量Init,且收到了服务端的Init ACK, 但在客户端发送COOKIE ECHO之后收到了服务端的Abort
+抓包现象是模拟客户端发送了大量`INIT`,且收到了服务端的`INIT_ACK`, 但在客户端发送`COOKIE_ECHO`之后收到了服务端的`ABORT`
+
+![](img/sctp_abort_capture.png)
+
+    经过INIT -> INIT_ACK -> COOKIE_ECHO阶段后, 收到服务端ABORT, 多次重试后最终握手连接成功。
 
 ### 分析与猜想
 
@@ -26,3 +30,5 @@
 ### 解决
 
 限制模拟客户端的并发速度, 使服务端能顺利完成所有的握手连接, 再进行后续的业务传输。
+
+    另一种方案是服务端listen的时候放开限制, 增加syn backlog的容量, 同时在sysctl中设置比listen大的内核参数。

@@ -1,5 +1,8 @@
 ## CentOS7部署OAI编译调试环境(支持离线)
 
+主页[https://gitlab.eurecom.fr/oai/openairinterface5g/](https://gitlab.eurecom.fr/oai/openairinterface5g/)
+
+下载[https://gitlab.eurecom.fr/oai/openairinterface5g/-/archive/develop/openairinterface5g-develop.tar.gz](https://gitlab.eurecom.fr/oai/openairinterface5g/-/archive/develop/openairinterface5g-develop.tar.gz)
 
 
 ### 1. OAI的各种值得看的文件

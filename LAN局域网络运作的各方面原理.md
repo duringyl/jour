@@ -29,7 +29,7 @@ DHCP（Dynamic Host Configuration Protocol，动态主机配置协议）使用UD
 - **Discover**：当DHCP客户端启动时，它会广播一个Discover报文，以寻找网络上的DHCP服务器。这是DHCP过程的开始。
 	![](img/dhcp_discover.png)
 - **Offer**：DHCP服务器收到Discover报文后，会查找可用的IP地址，并构造一个Offer报文发送给DHCP客户端，告知客户端它可以提供该IP地址。
-	![](img/dhcp_discover.png)
+	![](img/dhcp_offer.png)
 - **Request**：DHCP客户端从接收到的多个Offer中选择一个，并发送一个Request报文给所选的DHCP服务器，请求分配该IP地址。如果客户端之前已经分配了IP地址，并且在租期过去一半时，它会发送单播Request报文来续延租期。
 	![](img/dhcp_request.png)
 - **ACK**：DHCP服务器收到Request报文后，会检查请求的有效性，并发送一个ACK报文作为回应，确认IP地址的分配。

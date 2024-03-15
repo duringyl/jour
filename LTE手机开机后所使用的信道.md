@@ -53,7 +53,9 @@ SSS的全称是Secondary Synchronization Signal，辅同步信号。
 
 从上面这个公式可以看出，要获得PCFICH，需要什么条件？嗯，需要知道PCI，以及带宽（总可用REG数）。还好，在上面读取<font color="red">PSS和SSS</font>的时候，就算出来<font color="red">PCI</font>了，读取<font color="red">PBCH</font>的时候，获取了<font color="red">带宽</font>。
 
-MIB消息实例：![lte_ue_boot_mib_msg](img/lte_ue_boot_mib_msg.jpg)
+MIB消息实例：
+
+![lte_ue_boot_mib_msg](img/lte_ue_boot_mib_msg.jpg)
 
 
 ### 第五步：读取PDCCH信道
@@ -64,7 +66,9 @@ MIB消息实例：![lte_ue_boot_mib_msg](img/lte_ue_boot_mib_msg.jpg)
 
 通过PDCCH信道，手机终于知道系统消息SIB1的调度信息在哪里。于是，它就去相应的位置读取PDSCH，获取SIB1消息。SIB1消息里有什么呢？
 
-SIB1消息实例：![lte_ue_boot_sib1_msg](img/lte_ue_boot_sib1_msg.jpg)
+SIB1消息实例：
+
+![lte_ue_boot_sib1_msg](img/lte_ue_boot_sib1_msg.jpg)
 
 通过读取SIB1消息，手机获得了<font color="red">MCC、MNC、TAC号、小区CELL ID、是否barred、最小接收电平、最大发射功率、上下行子帧配比、特殊子帧配置</font>。最重要的是，获得了<font color="red">其他SIB消息</font>的配置信息，以及系统消息标志位，以通知手机当前系统消息是否发生改变。如果该系统消息标志位与手机中储存的值一致，则手机不用再继续去读取系统消息了。
 

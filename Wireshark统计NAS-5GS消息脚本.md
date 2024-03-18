@@ -1,6 +1,6 @@
-### wireshark用于统计NAS-5GS消息数量的lua脚本(*wireshark自定义菜单*)
+## wireshark用于统计NAS-5GS消息数量的lua脚本(*wireshark自定义菜单*)
 
-##### nas_5gs_statistics.lua:
+### nas_5gs_statistics.lua:
 
 ```lua
 --[[
@@ -105,9 +105,11 @@ local function nas_5gs_statistics()
 end
 
 register_menu("NAS-5GS", nas_5gs_statistics, MENU_STAT_UNSORTED)    -- Test/Packets
+```
 
+### other backup↓
 
--- other backup↓
+```lua
 --[[
 usage:
     1. Tools -> Lua -> Console 打开控制台;
